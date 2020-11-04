@@ -1,0 +1,23 @@
+{
+  "name": "typeorm-shared-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "preinstall": "cd ../shared && npm ci",
+    "prebuild": "cd ../shared && npm run build",
+    "build": "tsc -p tsconfig.json",
+    "start": "ts-node src/index.ts",
+    "prod": "NODE_ENV=production node dist/index.js"
+  },
+  "dependencies": {
+    "@types/node": "^14.14.6",
+    "dotenv": "^8.2.0",
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^5.0.0",
+    "ts-node": "^9.0.0",
+    "typeorm": "^0.2.29",
+    "typeorm-shared": "file:../shared/",
+    "typescript": "^4.0.5"
+  }
+}
